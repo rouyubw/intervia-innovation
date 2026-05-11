@@ -6,123 +6,35 @@
 <title>About | Intervia Innovation</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+TC:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-/* 1. STICKY FOOTER SETUP */
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
-body {
-    font-family: "Inter", "Noto Sans TC", sans-serif;
-    background: #0b0b0b;
-    color: #eaeaea;
-    line-height: 1.7;
-    display: flex;
-    flex-direction: column;
-}
-
-/* 2. NAVIGATION & LOGO */
-nav {
-    background: #111;
-    padding: 20px 40px;
-    border-bottom: 1px solid #222;
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    height: 80px; /* Standardized size */
-    width: auto;
-    margin-right: 35px;
-}
-
-nav a {
-    color: #eaeaea;
-    text-decoration: none;
-    margin-right: 24px;
-    font-weight: 500;
-    font-size: 15px;
-    transition: color 0.2s;
-}
-
-nav a:hover {
-    color: #7dd3fc;
-}
-
-/* 3. MAIN CONTENT AREA */
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 60px 20px;
-    flex: 1 0 auto; /* Pushes footer to absolute bottom */
-}
-
-h1 {
-    font-size: 42px;
-    font-weight: 700;
-    margin-bottom: 25px;
-    color: #fff;
-}
-
-p {
-    font-size: 18px;
-    color: #cfcfcf;
-    margin-bottom: 20px;
-}
-
-/* 4. FOOTER */
-footer {
-    text-align: center;
-    padding: 40px 20px;
-    font-size: 14px;
-    color: #777;
-    border-top: 1px solid #222;
-    background: #0b0b0b;
-    flex-shrink: 0;
-}
-
-/* 5. MOBILE RESPONSIVENESS */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        padding: 20px;
-        text-align: center;
-    }
-    .logo {
-        margin-right: 0;
-        margin-bottom: 20px;
-        height: 60px;
-    }
-    nav a {
-        margin: 5px 12px;
-    }
-}
+html, body { height: 100%; margin: 0; }
+body { font-family: "Inter", "Noto Sans TC", sans-serif; background: #0b0b0b; color: #eaeaea; line-height: 1.7; display: flex; flex-direction: column; }
+nav { background: #111; padding: 20px 40px; border-bottom: 1px solid #222; display: flex; align-items: center; }
+.logo { height: 80px; width: auto; }
+.nav-links { display: flex; align-items: center; margin-left: 35px; }
+nav a { color: #eaeaea; text-decoration: none; margin-right: 24px; font-weight: 500; font-size: 15px; }
+nav a:hover { color: #7dd3fc; }
+.container { max-width: 900px; margin: 0 auto; padding: 60px 20px; flex: 1 0 auto; text-align: left; }
+h1 { font-size: 42px; font-weight: 700; margin-bottom: 25px; }
+p { font-size: 18px; color: #cfcfcf; margin-bottom: 20px; }
+footer { text-align: center; padding: 40px 20px; font-size: 14px; color: #777; border-top: 1px solid #222; background: #0b0b0b; flex-shrink: 0; }
 </style>
 </head>
 <body>
-
 <nav>
-    <img src="1.png" alt="Intervia Innovation" class="logo">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="insights.html">Insights</a>
-    <a href="contact.html">Contact</a>
+    <a href="index.html"><img src="1.png" alt="Intervia Innovation" class="logo"></a>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="insights.html">Insights</a>
+        <a href="contact.html">Contact</a>
+    </div>
 </nav>
-
 <div class="container">
     <h1>About</h1>
-    <p>
-        At Intervia Innovation, we connect global innovations in emerging earth- and human-health technologies and solutions with opportunities across key Asian markets and beyond. Leveraging our deep regional experience and networks, we bridge innovation, investment, and implementation to enable transformative projects that improve lives, strengthen communities, and make better use of natural resources.
-    </p>
-    <p>
-        We focus on fostering cross-border collaboration, facilitating technology adoption, and supporting scalable initiatives that deliver measurable positive impact for people and the planet.
-    </p>
+    <p>At Intervia Innovation, we connect global innovations in emerging earth- and human-health technologies and solutions with opportunities across key Asian markets and beyond. Leveraging our deep regional experience and networks, we bridge innovation, investment, and implementation to enable transformative projects that improve lives, strengthen communities, and make better use of natural resources.</p>
+    <p>We focus on fostering cross-border collaboration, facilitating technology adoption, and supporting scalable initiatives that deliver measurable positive impact for people and the planet.</p>
 </div>
-
-<footer>
-    © 2026 Intervia Innovation
-</footer>
-
+<footer>© 2026 Intervia Innovation</footer>
 </body>
 </html>
