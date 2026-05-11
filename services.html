@@ -48,13 +48,12 @@ nav a:hover {
     color: #7dd3fc;
 }
 
-/* 3. MAIN CONTENT (Aligned with About page margin) */
+/* 3. MAIN CONTENT (Title remains left-aligned with About page) */
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 60px 20px;
     flex: 1 0 auto;
-    text-align: left;
 }
 
 h1 {
@@ -62,17 +61,20 @@ h1 {
     font-weight: 700;
     margin-bottom: 50px;
     color: #fff;
+    text-align: left; /* Keep title aligned with your About page */
 }
 
-/* 4. HORIZONTAL SERVICE BOXES WITH WHITE LINES */
+/* 4. CENTERED HORIZONTAL SERVICE BOXES */
 .services-row {
     display: flex;
     gap: 25px;
-    justify-content: space-between;
+    justify-content: center; /* Centers the row of boxes */
+    text-align: left; /* Keeps text inside boxes left-aligned */
 }
 
 .service-column {
     flex: 1;
+    max-width: 340px; /* Prevents boxes from getting too wide while centered */
     display: flex;
     flex-direction: column;
 }
@@ -80,15 +82,16 @@ h1 {
 .service-title {
     font-size: 22px;
     font-weight: 600;
-    color: #fff; /* Changed to white for a cleaner look with the box */
+    color: #7dd3fc; /* Reverted to Blue */
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
+    text-align: center; /* Centers title above the box */
 }
 
 .service-box {
     background: transparent;
-    border: 1px solid #ffffff; /* Explicit White Line */
+    border: 1px solid #7dd3fc; /* Blue Box Line */
     padding: 30px;
     border-radius: 2px;
     height: 100%;
@@ -125,6 +128,11 @@ footer {
 @media (max-width: 900px) {
     .services-row {
         flex-direction: column;
+        align-items: center;
+    }
+    .service-column {
+        max-width: 100%;
+        width: 100%;
     }
     nav {
         flex-direction: column;
@@ -196,4 +204,3 @@ footer {
 
 </body>
 </html>
-   
