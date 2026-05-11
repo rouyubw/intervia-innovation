@@ -6,47 +6,41 @@
 <title>About | Intervia Innovation</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-    /* ... keep all your original desktop styles and colors ... */
+    /* 1. RESTORE ORIGINAL COLORS & LAYOUT */
+    html, body { height: 100%; margin: 0; }
+    body { font-family: "Inter", "Noto Sans TC", sans-serif; background: #0b0b0b; color: #eaeaea; line-height: 1.7; display: flex; flex-direction: column; }
+    
+    nav { 
+        background: #111; 
+        padding: 20px 40px; 
+        border-bottom: 1px solid #222; 
+        display: flex; 
+        align-items: center; 
+        flex-wrap: wrap; /* THIS SAVES THE CONTACT TAB FROM BREAKING */
+    }
 
-    /* ----------------------------------------------------------- */
-    /* THE MOBILE FIX: VERTICAL STACK WITHOUT CHANGING STYLE       */
-    /* ----------------------------------------------------------- */
+    .logo { height: 80px; width: auto; margin-right: 35px; }
+    nav a { color: #eaeaea; text-decoration: none; margin-right: 24px; font-weight: 500; font-size: 15px; }
+    nav a:hover { color: #7dd3fc; }
+
+    /* 2. RESTORE ORIGINAL LANGUAGE MENU */
+    .lang-menu { position: relative; display: inline-block; margin-left: auto; }
+    .lang-btn { background: transparent; color: #eaeaea; padding: 8px 15px; font-size: 14px; border: 1px solid #444; cursor: pointer; font-family: inherit; border-radius: 2px; }
+    .dropdown-content { display: none; position: absolute; right: 0; background-color: #111; min-width: 140px; border: 1px solid #222; z-index: 100; }
+    .dropdown-content a { color: #eaeaea; padding: 12px 16px; text-decoration: none; display: block; margin-right: 0 !important; font-size: 14px; }
+    .lang-menu:hover .dropdown-content { display: block; }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 80px 20px; flex: 1 0 auto; }
+    h1 { font-size: 42px; font-weight: 700; margin-bottom: 30px; color: #fff; }
+    p { margin-bottom: 25px; font-size: 18px; font-weight: 300; color: #cfcfcf; }
+    footer { text-align: center; padding: 40px 20px; font-size: 14px; color: #777; border-top: 1px solid #222; background: #0b0b0b; flex-shrink: 0; }
+
+    /* 3. MINIMAL MOBILE TWEAK (JUST FOR SPACING) */
     @media (max-width: 768px) {
-        nav {
-            flex-direction: column; /* This stacks your items vertically */
-            padding: 25px 0;
-            align-items: center;
-        }
-
-        .logo {
-            margin-right: 0;
-            margin-bottom: 20px;
-            height: 60px; /* Adjusting size for mobile visibility */
-        }
-
-        /* This ensures "Home", "About", etc. each have their own line */
-        nav a {
-            margin: 8px 0; 
-            display: block; 
-            width: 100%;
-            text-align: center;
-            font-size: 16px;
-            color: #eaeaea; /* Keeping your white/gray text */
-        }
-
-        /* Fixes the language menu position */
-        .lang-menu {
-            margin: 15px auto 0;
-            display: inline-block;
-            text-align: center;
-        }
-
-        .lang-btn {
-            background: transparent;
-            color: #eaeaea;
-            border: 1px solid #444;
-            padding: 10px 20px;
-        }
+        nav { padding: 15px 20px; justify-content: center; }
+        .logo { height: 50px; margin-right: 20px; margin-bottom: 10px; }
+        nav a { margin-right: 15px; font-size: 14px; line-height: 2; }
+        .lang-menu { margin-left: 0; margin-top: 10px; width: 100%; text-align: center; }
     }
 </style>
 </head>
