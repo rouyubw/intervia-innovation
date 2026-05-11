@@ -4,36 +4,48 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About | Intervia Innovation</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+TC:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
 html, body { height: 100%; margin: 0; }
-body { font-family: "Inter", "Noto Sans TC", sans-serif; background: #0b0b0b; color: #eaeaea; line-height: 1.7; display: flex; flex-direction: column; }
+body { font-family: "Inter", sans-serif; background: #0b0b0b; color: #eaeaea; line-height: 1.7; display: flex; flex-direction: column; }
 nav { background: #111; padding: 20px 40px; border-bottom: 1px solid #222; display: flex; align-items: center; }
-.logo { height: 80px; width: auto; }
-.nav-links { display: flex; align-items: center; margin-left: 35px; }
+.logo { height: 80px; width: auto; margin-right: 35px; }
 nav a { color: #eaeaea; text-decoration: none; margin-right: 24px; font-weight: 500; font-size: 15px; }
 nav a:hover { color: #7dd3fc; }
-.container { max-width: 900px; margin: 0 auto; padding: 60px 20px; flex: 1 0 auto; text-align: left; }
-h1 { font-size: 42px; font-weight: 700; margin-bottom: 25px; }
-p { font-size: 18px; color: #cfcfcf; margin-bottom: 20px; }
+.lang-menu { position: relative; display: inline-block; margin-left: auto; }
+.lang-btn { background: transparent; color: #eaeaea; padding: 8px 15px; font-size: 14px; border: 1px solid #444; cursor: pointer; font-family: inherit; border-radius: 2px; }
+.dropdown-content { display: none; position: absolute; right: 0; background-color: #111; min-width: 140px; border: 1px solid #222; z-index: 100; }
+.dropdown-content a { color: #eaeaea; padding: 12px 16px; text-decoration: none; display: block; margin-right: 0 !important; font-size: 14px; }
+.dropdown-content a:hover { background-color: #1c1c1c; color: #7dd3fc; }
+.lang-menu:hover .dropdown-content { display: block; }
+.container { max-width: 900px; margin: 0 auto; padding: 80px 20px; flex: 1 0 auto; text-align: left; }
+h1 { font-size: 42px; font-weight: 700; margin-bottom: 30px; color: #fff; }
+p { margin-bottom: 25px; font-size: 18px; font-weight: 300; color: #cfcfcf; }
 footer { text-align: center; padding: 40px 20px; font-size: 14px; color: #777; border-top: 1px solid #222; background: #0b0b0b; flex-shrink: 0; }
 </style>
 </head>
 <body>
+
 <nav>
     <a href="index.html"><img src="1.png" alt="Intervia Innovation" class="logo"></a>
-    <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="insights.html">Insights</a>
-        <a href="contact.html">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="insights.html">Insights</a>
+    <a href="contact.html">Contact</a>
+    <div class="lang-menu">
+        <button class="lang-btn">Language ▾</button>
+        <div class="dropdown-content">
+            <a href="index.html">English</a>
+            <a href="zh/index.html">繁體中文</a>
+        </div>
     </div>
 </nav>
+
 <div class="container">
     <h1>About</h1>
-    <p>At Intervia Innovation, we connect global innovations in emerging earth- and human-health technologies and solutions with opportunities across key Asian markets and beyond. Leveraging our deep regional experience and networks, we bridge innovation, investment, and implementation to enable transformative projects that improve lives, strengthen communities, and make better use of natural resources.</p>
-    <p>We focus on fostering cross-border collaboration, facilitating technology adoption, and supporting scalable initiatives that deliver measurable positive impact for people and the planet.</p>
+    <p>At Intervia Innovation, we connect global innovation to implementation opportunities in key markets. With deep regional expertise and networks, we act as a commercial bridge, aligning innovation, capital, and execution to drive transformative projects.</p>
+    <p>Our focus is on driving cross-border collaboration and technology transfer, empowering impact-led innovation to create sustainable change.</p>
 </div>
 <footer>© 2026 Intervia Innovation</footer>
 </body>
