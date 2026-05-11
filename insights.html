@@ -99,3 +99,76 @@ h1 {
     font-size: 15px;
     color: #cfcfcf;
     margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.read-more {
+    font-size: 14px;
+    font-weight: 700;
+    color: #7dd3fc;
+    display: flex;
+    align-items: center;
+}
+
+/* Footer styling fixed to the bottom */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 14px;
+    color: #777;
+    border-top: 1px solid #222;
+    background: #0b0b0b;
+    flex-shrink: 0;
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="insights.html">Insights</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+    <h1>Insights</h1>
+
+    <div class="insights-grid">
+        <a href="article-1.html" class="article-card">
+            <span class="article-date">May 2026</span>
+            <h2 class="article-title">The Future of Tech Transfer in Asian Markets</h2>
+            <p class="article-summary">
+                Analyzing the bridge between global innovations and regional implementation for transformative project success.
+            </p>
+            <span class="read-more">Read Article →</span>
+        </a>
+
+        <a href="article-2.html" class="article-card">
+            <span class="article-date">April 2026</span>
+            <h2 class="article-title">Scaling Health Technologies</h2>
+            <p class="article-summary">
+                How cross-border collaboration is addressing emerging human-health challenges in private markets.
+            </p>
+            <span class="read-more">Read Article →</span>
+        </a>
+
+        <div class="article-card" style="opacity: 0.6; cursor: default;">
+            <span class="article-date">Coming Soon</span>
+            <h2 class="article-title">Resource Efficiency Strategies</h2>
+            <p class="article-summary">
+                Upcoming research on natural resource management and scalable environmental initiatives.
+            </p>
+            <span class="read-more">In Progress...</span>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    © 2026 Intervia Innovation
+</footer>
+
+</body>
+</html>   
