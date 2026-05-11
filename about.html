@@ -6,62 +6,46 @@
 <title>About | Intervia Innovation</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-    /* ... (Keep your base body and container styles) ... */
-
-    nav { 
-        background: #0b0b0b; /* Match the exact body background */
-        padding: 20px 40px; 
-        border-bottom: 1px solid #222; 
-        display: flex; 
-        align-items: center; 
-    }
-
-    .logo { 
-        height: 60px; 
-        width: auto; 
-        margin-right: 35px; 
-        /* This filter ensures the logo background is truly black */
-        filter: brightness(1.2) contrast(1.1); 
-    }
+    /* ... keep all your original desktop styles and colors ... */
 
     /* ----------------------------------------------------------- */
-    /* THE MOBILE FIX: CLEAN VERTICAL STACK                        */
+    /* THE MOBILE FIX: VERTICAL STACK WITHOUT CHANGING STYLE       */
     /* ----------------------------------------------------------- */
     @media (max-width: 768px) {
         nav {
-            flex-direction: column; /* Stack logo, links, and button */
-            padding: 30px 20px;
-            text-align: center;
+            flex-direction: column; /* This stacks your items vertically */
+            padding: 25px 0;
+            align-items: center;
         }
 
         .logo {
             margin-right: 0;
-            margin-bottom: 25px;
-            height: 70px; /* Make logo a bit bigger since it's centered */
+            margin-bottom: 20px;
+            height: 60px; /* Adjusting size for mobile visibility */
         }
 
-        /* Group the links so they don't break awkwardly */
+        /* This ensures "Home", "About", etc. each have their own line */
         nav a {
-            margin: 10px 0;
-            display: block; /* Each link gets its own line */
+            margin: 8px 0; 
+            display: block; 
             width: 100%;
+            text-align: center;
             font-size: 16px;
-            letter-spacing: 1px;
+            color: #eaeaea; /* Keeping your white/gray text */
         }
 
+        /* Fixes the language menu position */
         .lang-menu {
-            margin-top: 20px;
-            width: 100%;
-            display: flex;
-            justify-content: center;
+            margin: 15px auto 0;
+            display: inline-block;
+            text-align: center;
         }
 
         .lang-btn {
-            width: 100%;
-            max-width: 250px; /* Professional looking button width */
-            padding: 12px;
-            background: #111;
-            border: 1px solid #333;
+            background: transparent;
+            color: #eaeaea;
+            border: 1px solid #444;
+            padding: 10px 20px;
         }
     }
 </style>
