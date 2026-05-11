@@ -3,31 +3,93 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Intervia Innovation</title>
+<title>About | Intervia Innovation</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+TC:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-body{font-family:"Inter","Noto Sans TC",sans-serif;background:#0b0b0b;color:#eaeaea;margin:0;line-height:1.7}
-nav{background:#111;padding:18px 40px;border-bottom:1px solid #222}
-nav a{color:#eaeaea;text-decoration:none;margin-right:24px;font-weight:500;font-size:15px}
-nav a:hover{color:#7dd3fc}
-.container{max-width:820px;margin:auto;padding:60px 20px}
-h1{font-size:42px;font-weight:700;margin-bottom:10px}
-h2{font-size:26px;font-weight:600;margin-top:50px}
-p{font-size:17px;color:#cfcfcf}
-footer{text-align:center;padding:40px;font-size:14px;color:#777;border-top:1px solid #222;margin-top:80px}
+/* Ensures the footer stays at the bottom of the viewport on short pages */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: "Inter", "Noto Sans TC", sans-serif;
+    background: #0b0b0b;
+    color: #eaeaea;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    background: #111;
+    padding: 18px 40px;
+    border-bottom: 1px solid #222;
+}
+
+nav a {
+    color: #eaeaea;
+    text-decoration: none;
+    margin-right: 24px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #7dd3fc;
+}
+
+/* This container grows to fill available space, pushing the footer down */
+.container {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    flex: 1 0 auto;
+}
+
+h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+p {
+    font-size: 17px;
+    color: #cfcfcf;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 14px;
+    color: #777;
+    border-top: 1px solid #222;
+    background: #0b0b0b;
+    flex-shrink: 0;
+}
 </style>
 </head>
 <body>
+
 <nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="services.html">Services</a>
-<a href="insights.html">Insights</a>
-<a href="contact.html">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="insights.html">Insights</a>
+    <a href="contact.html">Contact</a>
 </nav>
+
 <div class="container">
-<h1>About</h1><p>We connect global innovations in earth and human health with Asian market opportunities.</p>
+    <h1>About</h1>
+    <p>
+        At Intervia Innovation, we connect global innovations in emerging earth- and human-health technologies and solutions with opportunities across key Asian markets and beyond. Leveraging our deep regional experience and networks, we bridge innovation, investment, and implementation to enable transformative projects that improve lives, strengthen communities, and make better use of natural resources. We focus on fostering cross-border collaboration, facilitating technology adoption, and supporting scalable initiatives that deliver measurable positive impact for people and the planet.
+    </p>
 </div>
-<footer>© 2026 Intervia Innovation</footer>
+
+<footer>
+    © 2026 Intervia Innovation
+</footer>
+
 </body>
 </html>
