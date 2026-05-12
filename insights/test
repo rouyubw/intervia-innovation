@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Technology Is Worth More Somewhere Else | Intervia Innovation</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0b0b0b;
+    --card: #161616;
+    --border: #222;
+    --gold: #7dd3fc;
+    --teal: #7dd3fc;
+    --text: #cfcfcf;
+    --muted: #777;
+    --white: #fff;
+    --nav-bg: #111;
+  }
 
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', 'Sora', sans-serif;
+    font-size: 17px;
+    line-height: 1.75;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  /* SHARED NAVIGATION STYLE FROM ABOUT.HTML */
+  nav { 
+    background: var(--nav-bg); 
+    padding: 20px 40px; 
+    border-bottom: 1px solid var(--border); 
+    display: flex; 
+    align-items: center; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .logo { height: 80px; width: auto; margin-right: 35px; }
+  nav a { color: #eaeaea; text-decoration: none; margin-right: 24px; font-weight: 500; font-size: 15px; }
+  nav a:hover { color: var(--gold); }
+  
+  .lang-menu { position: relative; display: inline-block; margin-left: auto; }
+  .lang-btn { background: transparent; color: #eaeaea; padding: 8px 15px; font-size: 14px; border: 1px solid #444; cursor: pointer; font-family: inherit; border-radius: 2px; }
+  .dropdown-content { display: none; position: absolute; right: 0; background-color: #111; min-width: 140px; border: 1px solid #222; z-index: 100; }
+  .dropdown-content a { color: #eaeaea; padding: 12px 16px; text-decoration: none; display: block; margin-right: 0 !important; font-size: 14px; }
+  .dropdown-content a:hover { background-color: #1c1c1c; color: var(--gold); }
+  .lang-menu:hover .dropdown-content { display: block; }
+
+  /* HERO */
+  .hero {
+    padding: 5rem 1.5rem 3.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 90% 60% at 50% 0%, rgba(125,211,252,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .tag {
+    display: inline-block;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.9rem;
+    border-radius: 2rem;
+    margin-bottom: 1.8rem;
+  }
