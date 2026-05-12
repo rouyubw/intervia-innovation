@@ -3,74 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Technology Is Worth More Somewhere Else</title>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<title>Your Technology Is Worth More Somewhere Else | Intervia Innovation</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-  /* Update these specific lines in your <style> block */
+  /* 1. NAVIGATION & LOGO ALIGNMENT (Directly from about.html) */
+  html, body { height: 100%; margin: 0; }
+  body { font-family: "Inter", sans-serif; background: #0b0b0b; color: #eaeaea; line-height: 1.7; display: flex; flex-direction: column; }
+  
+  nav { background: #111; padding: 20px 40px; border-bottom: 1px solid #222; display: flex; align-items: center; }
+  
+  /* Height set to 80px to match your professional branding */
+  .logo { height: 80px; width: auto; margin-right: 35px; }
+  
+  nav a { color: #eaeaea; text-decoration: none; margin-right: 24px; font-weight: 500; font-size: 15px; }
+  nav a:hover { color: #7dd3fc; }
 
-nav { 
-    background: #111; 
-    padding: 20px 40px; 
-    border-bottom: 1px solid #222; 
-    display: flex; 
-    align-items: center; 
-}
+  /* 2. LANGUAGE MENU ALIGNMENT (Pushes tabs left, button right) */
+  .lang-menu { position: relative; display: inline-block; margin-left: auto; }
+  .lang-btn { background: transparent; color: #eaeaea; padding: 8px 15px; font-size: 14px; border: 1px solid #444; cursor: pointer; font-family: inherit; border-radius: 2px; }
+  .dropdown-content { display: none; position: absolute; right: 0; background-color: #111; min-width: 140px; border: 1px solid #222; z-index: 100; }
+  .dropdown-content a { color: #eaeaea; padding: 12px 16px; text-decoration: none; display: block; margin-right: 0 !important; font-size: 14px; }
+  .dropdown-content a:hover { background-color: #1c1c1c; color: #7dd3fc; }
+  .lang-menu:hover .dropdown-content { display: block; }
 
-/* This height (80px) fixes the giant logo in your screenshot */
-.logo { 
-    height: 80px; 
-    width: auto; 
-    margin-right: 35px; 
-}
-
-/* This aligns your Home, About, Services tabs */
-nav a { 
-    color: #eaeaea; 
-    text-decoration: none; 
-    margin-right: 24px; 
-    font-weight: 500; 
-    font-size: 15px; 
-}
-
-/* This pushes the Language button to the far right */
-.lang-menu { 
-    position: relative; 
-    display: inline-block; 
-    margin-left: auto; 
-}
-
-.lang-btn { 
-    background: transparent; 
-    color: #eaeaea; 
-    padding: 8px 15px; 
-    font-size: 14px; 
-    border: 1px solid #444; 
-    cursor: pointer; 
-    font-family: inherit; 
-    border-radius: 2px; 
-}
+  /* 3. ARTICLE LAYOUT & THEME */
   :root {
     --bg: #0b0b0b;
     --card: #161616;
     --border: #222;
     --gold: #7dd3fc;
-    --teal: #7dd3fc;
     --text: #cfcfcf;
     --muted: #777;
     --white: #fff;
   }
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  *, *::before, *::after { box-sizing: border-box; }
 
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Sora', sans-serif;
-    font-size: 17px;
-    line-height: 1.75;
-  }
-
-  /* HERO */
   .hero {
     padding: 5rem 1.5rem 3.5rem;
     text-align: center;
@@ -97,6 +65,7 @@ nav a {
     padding: 0.3rem 0.9rem;
     border-radius: 2rem;
     margin-bottom: 1.8rem;
+    font-family: 'Sora', sans-serif;
   }
 
   h1 {
@@ -119,21 +88,12 @@ nav a {
     font-weight: 300;
   }
 
-  .meta {
-    font-size: 0.75rem;
-    color: var(--muted);
-    letter-spacing: 0.06em;
-  }
-
-  /* BODY */
   .container {
     max-width: 680px;
     margin: 0 auto;
     padding: 2.5rem 1.5rem 5rem;
+    flex: 1 0 auto;
   }
-
-  p { margin-bottom: 1.3rem; }
-  strong { color: var(--white); font-weight: 600; }
 
   .opener {
     font-family: 'Lora', Georgia, serif;
@@ -145,15 +105,6 @@ nav a {
     margin-bottom: 2rem;
   }
 
-  h2 {
-    font-family: 'Lora', Georgia, serif;
-    font-size: 1.45rem;
-    color: var(--white);
-    margin: 2.8rem 0 0.8rem;
-    line-height: 1.3;
-  }
-
-  /* STAT ROW */
   .stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -176,92 +127,18 @@ nav a {
     font-size: 2.2rem;
     color: var(--gold);
     display: block;
-    line-height: 1;
     margin-bottom: 0.4rem;
   }
 
-  .stat .d {
-    font-size: 0.78rem;
-    color: var(--muted);
-    line-height: 1.4;
-  }
+  .stat .d { font-size: 0.78rem; color: var(--muted); line-height: 1.4; }
 
-  /* PULL */
-  .pull {
-    border-left: 3px solid var(--gold);
-    padding: 1rem 1.4rem;
-    margin: 2rem 0;
-    background: rgba(125,211,252,0.06);
-    border-radius: 0 6px 6px 0;
-  }
-
-  .pull p {
-    font-family: 'Lora', Georgia, serif;
-    font-style: italic;
-    font-size: 1.08rem;
-    color: var(--white);
-    margin: 0;
-  }
-
-  /* OPPORTUNITY LIST */
-  .opps {
-    display: grid;
-    gap: 1rem;
-    margin: 1.5rem 0 2rem;
-  }
-
-  .opp {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 1.2rem 1.4rem;
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
-  }
-
-  .opp-icon {
-    font-size: 1.4rem;
-    line-height: 1;
-    flex-shrink: 0;
-    margin-top: 0.1rem;
-  }
-
-  .opp-body .opp-title {
-    font-weight: 600;
-    color: var(--white);
-    font-size: 0.95rem;
-    margin-bottom: 0.25rem;
-  }
-
-  .opp-body p {
-    font-size: 0.88rem;
-    color: var(--muted);
-    margin: 0;
-    line-height: 1.5;
-  }
-
-  /* CTA */
   .cta-box {
     background: linear-gradient(135deg, rgba(125,211,252,0.1), rgba(125,211,252,0.05));
     border: 1px solid var(--gold);
     border-radius: 10px;
-    padding: 2rem 1.8rem;
-    margin-top: 2.5rem;
+    padding: 2.5rem 1.8rem;
+    margin-top: 3rem;
     text-align: center;
-  }
-
-  .cta-box h3 {
-    font-family: 'Lora', Georgia, serif;
-    font-size: 1.3rem;
-    color: var(--white);
-    margin-bottom: 0.7rem;
-  }
-
-  .cta-box p {
-    font-size: 0.92rem;
-    color: var(--muted);
-    margin-bottom: 1.3rem;
   }
 
   .cta-btn {
@@ -269,163 +146,84 @@ nav a {
     background: var(--gold);
     color: #0b0b0b;
     font-weight: 700;
-    font-size: 0.85rem;
-    letter-spacing: 0.06em;
     padding: 0.75rem 1.8rem;
-    border-radius: 4px;
     text-decoration: none;
     text-transform: uppercase;
+    border-radius: 4px;
+    font-size: 0.85rem;
   }
 
-  /* FOOTNOTE */
-  .foot {
-    margin-top: 3rem;
-    padding-top: 1.2rem;
-    border-top: 1px solid var(--border);
-    font-size: 0.75rem;
-    color: var(--muted);
-    line-height: 1.6;
+  footer {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 14px;
+    color: #777;
+    border-top: 1px solid #222;
+    background: #0b0b0b;
+    flex-shrink: 0;
   }
 
-  sup { font-size: 0.65rem; color: var(--gold); vertical-align: super; line-height: 0; }
-
-  @media (max-width: 520px) {
+  @media (max-width: 600px) {
+    nav { padding: 15px 20px; flex-wrap: wrap; }
+    .logo { height: 60px; margin-bottom: 10px; }
     .stats { grid-template-columns: 1fr; }
-    .stat { border-bottom: 1px solid var(--border); }
   }
 </style>
 </head>
 <body>
+
 <nav>
-    <a href="index.html"><img src="1.png" alt="Intervia Innovation" class="logo"></a>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="insights.html">Insights</a>
-    <a href="contact.html">Contact</a>
+    <a href="../index.html"><img src="../1.png" alt="Intervia Innovation" class="logo"></a>
+    <a href="../index.html">Home</a>
+    <a href="../about.html">About</a>
+    <a href="../services.html">Services</a>
+    <a href="../insights.html">Insights</a>
+    <a href="../contact.html">Contact</a>
     <div class="lang-menu">
         <button class="lang-btn">Language ▾</button>
         <div class="dropdown-content">
-            <a href="index.html">English</a>
-            <a href="zh/contact_zh.html">繁體中文</a>
+            <a href="../index.html">English</a>
+            <a href="../index_zh.html">繁體中文</a>
         </div>
     </div>
 </nav>
+
 <div class="hero">
   <div class="tag">SME Growth · Asia</div>
   <h1>Your Technology Is Worth <em>More</em> Somewhere Else</h1>
   <p class="sub">Asian markets are absorbing technology faster than ever. The opportunity window for SMEs is right now.</p>
-  <p class="meta">May 2026 · 3 min read · Based on WIPO World Intellectual Property Report 2026</p>
 </div>
 
 <div class="container">
+  <p class="opener">Here is a question most SME owners never ask: <em>what if the product or process you built for your home market is exactly what another Asian market is hungry for — and has no access to?</em></p>
 
-  <p class="opener">Here is a question most SME owners never ask: <em>what if the product or process you built for your home market is exactly what another Asian market is hungry for — and has no access to?</em> The data says that window is wide open. And it is closing.</p>
-
-  <p>The WIPO World Intellectual Property Report 2026 just dropped the most comprehensive study of technology diffusion ever published — 250 years of data, 50 years of patent flows.<sup>1</sup> Buried in it is a finding that every business owner in Asia should read.</p>
-
-  <div class="pull">
-    <p>Technology adoption gaps between advanced economies and Asia have not just narrowed — in digital technologies, Asia has <strong>exceeded</strong> advanced economy usage levels.<sup>2</sup></p>
-  </div>
-
-  <p>Asia is not waiting anymore. Markets that once trailed the West by decades in adopting new technology are now moving faster. <strong>That means the window to bring your technology in early — before competitors do — is shorter than it has ever been.</strong> But it is still open.</p>
-
-  <h2>The Numbers Are Hard to Ignore</h2>
+  <p>The WIPO World Intellectual Property Report 2026 identifies a massive shift in technology diffusion. In digital sectors, Asia has <strong>exceeded</strong> advanced economy usage levels, proving that the gap has closed.</p>
 
   <div class="stats">
     <div class="stat">
       <span class="n">½</span>
-      <span class="d">The time it now takes for technology knowledge to cross a border — halved over 50 years<sup>3</sup></span>
+      <span class="d">Time it takes for tech knowledge to cross borders has halved over 50 years.</span>
     </div>
     <div class="stat">
       <span class="n">7.8 yrs</span>
-      <span class="d">Average time for Asian science to become an Asian patent — the fastest regional cycle in the world<sup>4</sup></span>
+      <span class="d">Fastest regional cycle for science to become a patent (Asia).</span>
     </div>
     <div class="stat">
       <span class="n">≈0</span>
-      <span class="d">Difference today between how fast knowledge moves domestically vs. across borders<sup>3</sup></span>
+      <span class="d">Difference today between domestic and cross-border knowledge speed.</span>
     </div>
   </div>
 
-  <p>What this tells you practically: <strong>the friction of moving technology across Asian markets has collapsed.</strong> The old excuses — too far, too complex, too slow — are gone. What remains is opportunity, and the companies who move first capture it.</p>
-
-  <h2>Where the Opportunity Is Specifically</h2>
-
-  <p>Not all corridors are equal. The report confirms that proximity still turbocharges transfer speed — regional moves outperform cross-continental ones significantly.<sup>4</sup> Here is where SMEs should be looking:</p>
-
-  <div class="opps">
-    <div class="opp">
-      <div class="opp-icon">🇯🇵→🇲🇾🇻🇳🇮🇩</div>
-      <div class="opp-body">
-        <div class="opp-title">Japan → Southeast Asia</div>
-        <p>Robotics, automation, and green tech flowing through active bilateral programs. SE Asian manufacturers are actively seeking proven Japanese SME technology.</p>
-      </div>
-    </div>
-    <div class="opp">
-      <div class="opp-icon">🇸🇬→🌏</div>
-      <div class="opp-body">
-        <div class="opp-title">Singapore as the Launchpad</div>
-        <p>Capabilities built in Singapore scale regionally fast. Companies like HEINEKEN used Singapore's AI ecosystem to reach 70+ global markets.<sup>5</sup> SMEs can use the same playbook.</p>
-      </div>
-    </div>
-    <div class="opp">
-      <div class="opp-icon">🇭🇰→🇨🇳</div>
-      <div class="opp-body">
-        <div class="opp-title">Hong Kong → Greater Bay Area</div>
-        <p>The Qianhai Special Zone is purpose-built for technology commercialisation from Hong Kong into the Shenzhen and mainland manufacturing ecosystem.</p>
-      </div>
-    </div>
-    <div class="opp">
-      <div class="opp-icon">🌏→🌏</div>
-      <div class="opp-body">
-        <div class="opp-title">Intra-ASEAN</div>
-        <p>Indonesia, Vietnam, Thailand, and the Philippines are absorbing technology at record pace — but originating very little of it locally. That gap is your margin.</p>
-      </div>
-    </div>
-    <div class="opp">
-      <div class="opp-icon">🇹🇼→🌏</div>
-      <div class="opp-body">
-        <div class="opp-title">Taiwan — The Quiet Multiplier</div>
-        <p>Taiwan controls roughly 92% of the world's most advanced chip fabrication.<sup>7</sup> But the real SME story is further down the stack — Taiwanese equipment, packaging, and precision manufacturing firms are actively moving technology into Malaysia, Vietnam, and Thailand right now. At SEMICON SEA 2026 in Kuala Lumpur this month, 15 Taiwanese SMEs arrived with one explicit goal: turn showcases into deals.<sup>8</sup> If your business touches manufacturing, automation, or AI hardware — Taiwan's ecosystem is a transfer corridor that is wide open and actively looking for regional partners.</p>
-      </div>
-    </div>
-    <div class="opp">
-      <div class="opp-icon">🇮🇳↔️🌏</div>
-      <div class="opp-body">
-        <div class="opp-title">India & the South-South Opportunity</div>
-        <p>This is the corridor most SMEs overlook entirely. India is no longer just a destination for technology — it is becoming an originator. With $110 billion committed to AI by Reliance Industries alone, and a formal India–South Korea MSME cooperation framework signed in April 2026,<sup>9</sup> India is building structured two-way technology bridges with Asia's manufacturing powers. More importantly, India's proven models in fintech, agritech, and digital public infrastructure are highly transferable to Southeast Asia, Africa, and the Middle East — markets at a similar development stage with similar problems to solve. South-to-South technology transfer, from India outward, is arguably the most underpriced opportunity in Asia right now. The demand is there. The credibility is growing. The first movers will define the category.</p>
-      </div>
-    </div>
-  </div>
-
-  <h2>The Real Barrier Is Not What You Think</h2>
-
-  <p>Most SMEs assume the hard part of technology transfer is technical. It is not. The WIPO report is explicit: <strong>the binding constraint is not access to technology — it is the regulatory and institutional environment on both sides of the transfer.</strong><sup>6</sup> Licensing structures, IP protection, approval timelines, and the right local partner matter more than the technology itself.</p>
-
-  <p>The good news: those barriers are navigable. And the SMEs that figure them out first do not just enter a new market — they often <em>own</em> it, because the next entrant faces a market that has already been shaped around the first mover's product.</p>
-
-  <div class="pull">
-    <p>The companies winning in Asian technology transfer are not necessarily the ones with the best technology. They are the ones who moved while others were still deciding.</p>
-  </div>
+  <p>The binding constraint is no longer the technology itself, but the regulatory environment and finding the right local partner. As a commercial bridge, we align these elements to move your innovation across borders.</p>
 
   <div class="cta-box">
-    <h3>Ready to find out where your technology travels?</h3>
+    <h3>Ready to map your technology transfer?</h3>
     <p>Let's map the right markets, the right structure, and the right partners for your expansion.</p>
-    <a href="mailto:hello@interviainnovation.com?subject=Technology%20Transfer%20Enquiry&body=Hi%2C%20I%20read%20your%20article%20on%20technology%20transfer%20in%20Asia%20and%20would%20like%20to%20explore%20opportunities%20for%20my%20business." class="cta-btn">Start the Conversation</a>
+    <a href="mailto:hello@interviainnovation.com" class="cta-btn">Start the Conversation</a>
   </div>
-
-  <div class="foot">
-    <p><sup>1</sup> World Intellectual Property Organization (WIPO). (2026). <em>World Intellectual Property Report 2026: Technology on the Move.</em> Geneva: WIPO. DOI: 10.34667/tind.59025</p>
-    <p><sup>2</sup> WIPR 2026, Figure 3 — intensity of use analysis across regions and technology generations.</p>
-    <p><sup>3</sup> WIPR 2026, Executive Summary — international knowledge flow speed, based on patent citation lag analysis 1970–2020.</p>
-    <p><sup>4</sup> WIPR 2026, Chapter 4 — intra-regional knowledge flows; Asian science to Asian patents at 7.82 years versus 10–13 years cross-regionally.</p>
-    <p><sup>5</sup> Singapore Economic Development Board (EDB), 2025 — HEINEKEN Global GenAI Lab, Singapore.</p>
-    <p><sup>6</sup> WIPR 2026, Executive Summary and Chapter 1 — on absorptive capacity and regulatory frameworks as primary diffusion determinants.</p>
-    <p><sup>7</sup> EE Times Asia (2026) — "Inside Taiwan's Semiconductor Supremacy"; Taiwan produces approximately 92% of the world's most advanced logic chips as of early 2026.</p>
-    <p><sup>8</sup> SME & Entrepreneurship Magazine Asia (May 2026) — "Taiwanese Firms Spotlight Innovative Push at SEMICON Southeast Asia 2026," Kuala Lumpur, 5–7 May 2026.</p>
-    <p><sup>9</sup> Vision IAS / Ministry of MSMEs (April 2026) — India–South Korea MSME MoU signed April 20, 2026, under the Joint Strategic Vision for the India–ROK Special Strategic Partnership 2026–2030.</p>
-  </div>
-
 </div>
+
+<footer>© 2026 Intervia Innovation</footer>
+
 </body>
 </html>
